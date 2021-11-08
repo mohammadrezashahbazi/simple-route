@@ -23,7 +23,7 @@ public class RoutingService {
     private final String JSON_FILE = "F:\\countries.json";
 
     List<RoutingModel> routingModels = objectMapper.readValue(new File(JSON_FILE)
-            , new TypeReference<>() {
+            , new TypeReference<List<RoutingModel>>() {
 
             });
 
