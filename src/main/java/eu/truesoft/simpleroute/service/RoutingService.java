@@ -20,9 +20,9 @@ public class RoutingService {
     ObjectMapper objectMapper = new ObjectMapper();
 
     private final String JSON_URL = "https://raw.githubusercontent.com/mledoze/countries/master/countries.json";
-    private final String JSON_FILE = "F:\\countries.json";
+//    private final String JSON_FILE = "F:\\countries.json";
 
-    List<RoutingModel> routingModels = objectMapper.readValue(new File(JSON_FILE)
+    List<RoutingModel> routingModels = objectMapper.readValue(new URL(JSON_URL)
             , new TypeReference<List<RoutingModel>>() {
 
             });
